@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall Sina - 여성형 거인 포획</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'TTHakgyoansimMulgyeolB';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Ownglyph_Binsu-Rg';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://mblogthumb-phinf.pstatic.net/MjAyMjAxMjZfMjcx/MDAxNjQzMTMzNzA1NDAx.v5sCOR4JYCTcWTztrg4QIEfHGZMBzGeV3OE9O1nmgPAg.XDonTKx1G-nney4r4KFsT_vLIxBzQkNxLEj6TKBg4dYg.JPEG.sogno84/Zero-Raws_Shingeki_no_Kyojin_-_19_(MBS_1280x720_x264_AAC).mp4_001313854.jpg?type=w800');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+      color: #fff;
+      overflow-y: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+      margin: 0 0 10px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      color: #ffcc00;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+      animation: fadeInText 1.2s ease-in-out;
+    }
+
+    .female-titan {
+      margin-bottom: 40px;
+    }
+
+    .female-titan img {
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    .description {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      animation: fadeInText 1.5s ease-in-out;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: #3c2f2f;
+      color: #ffcc00;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 1000;
+      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+    }
+
+    .back-button i {
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: scale(1.05);
+      background: #5c4033;
+    }
+
+    .back-button:hover i {
+      transform: translateX(-5px);
+    }
+
+    .levi-squad {
+      margin-top: 60px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .squad-title {
+      font-size: 36px;
+      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+      color: #ffcc00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .squad-members {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .member {
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+    }
+
+    .member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    .member p {
+      font-size: 16px;
+      margin: 10px 0 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 48px; }
+      .subtitle { font-size: 22px; }
+      .female-titan img { max-width: 300px; }
+      .description { font-size: 16px; }
+      .squad-title { font-size: 28px; }
+      .squad-members {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+      .member img { width: 120px; height: 120px; }
+      .member p { font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 36px; }
+      .subtitle { font-size: 18px; }
+      .female-titan img { max-width: 200px; }
+      .description { font-size: 14px; }
+      .back-button { font-size: 14px; padding: 8px 15px; }
+      .squad-title { font-size: 22px; }
+      .squad-members {
+        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2열로 변경 */
+        gap: 10px;
+      }
+      .member img { width: 100px; height: 100px; }
+      .member p { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="giant_plus_page.html" class="back-button"><i class="fas fa-arrow-left"></i> 지도로 돌아가기</a>
+  <div class="container">
+    <h1>Wall Sina</h1>
+    <div class="subtitle">여성형 거인 포획</div>
+    <div class="female-titan">
+      <img src="https://i.namu.wiki/i/3xjDAUDnI1RqsrMSRh_Zq2ZRKnMUBhnnlUUiAMhgtNrBsqEkA7go7xqDvncDY2o-xYLg3MCdbyNC1vAGFujKHg.webp" alt="Female Titan Running">
+    </div>
+    <div class="description">
+      여성형 거인이 숲으로 도주하며 조사병단의 치밀한 포획 작전이 펼쳐짐.
+    </div>
+    <div class="levi-squad">
+      <h2 class="squad-title">리바이반</h2>
+      <div class="squad-members">
+        <div class="member">
+          <img src="https://i.namu.wiki/i/7IZxlFjEOUEy4FZqOytvlY1Es255ZgfA3rbBQDdsiXzJpRsNZKIL5YGfCFl2sSxCyjI6oG2r6arfgq_1UKSTiLyfik2Gh8UCM3vsDUIOARqTo9DHOnfZDgMNJNZRyyUXA9IarIkCo1OewaeBbUtUJg.webp" alt="Levi Ackerman">
+          <p>리바이 아커만</p>
+        </div>
+        <div class="member">
+          <img src="https://i.namu.wiki/i/WPExSQ65ez4yocHlEgKM0cU2GOOlpKqsTwKzxMjv7q-HBT5paj2bE8L_sGh7RbV48lFPUijT6BkrYja7oTEtqg.webp" alt="Erwin Smith">
+          <p>엘빈 스미스</p>
+        </div>
+        <div class="member">
+          <img src="https://i.namu.wiki/i/BU53wdPFkx4mFVxKYfDasNU3hSeRjIwe443skGS8vulnOPB22vn0UHyAnE6VMwaGc5nN7IdQkmfPYjEatsQYKQ.webp" alt="Petra Ral">
+          <p>페트라 랄</p>
+        </div>
+        <div class="member">
+          <img src="https://pbs.twimg.com/profile_images/378800000370132958/8dc3b0c111965a066b0cfde59288246b_400x400.jpeg" alt="Oluo Bozado">
+          <p>오르오 보자드</p>
+        </div>
+        <div class="member">
+          <img src="https://pbs.twimg.com/profile_images/378800000654726355/3bd0e87b907c536e88c942a84eb60621_400x400.jpeg" alt="Gunther Schultz">
+          <p>군타 슈르츠</p>
+        </div>
+        <div class="member">
+          <img src="https://data.onnada.com/character/201308/2077629048_79db9518_3.PNG" alt="Eld Jinn">
+          <p>에르드 진</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
