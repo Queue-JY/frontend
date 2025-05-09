@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall Rose - 트로스트 구 공방전</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'TTHakgyoansimMulgyeolB';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Ownglyph_Binsu-Rg';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20130513_104%2Flollipop623_1368409205075frrKk_JPEG%2F2.jpg&type=sc960_832');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+      color: #fff;
+      overflow-y: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+      margin: 0 0 10px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      color: #ffcc00;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+      animation: fadeInText 1.2s ease-in-out;
+    }
+
+    .colossal-titan {
+      margin-bottom: 40px;
+    }
+
+    .colossal-titan img {
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    .description {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      animation: fadeInText 1.5s ease-in-out;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: #3c2f2f;
+      color: #ffcc00;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 1000;
+      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+    }
+
+    .back-button i {
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: scale(1.05);
+      background: #5c4033;
+    }
+
+    .back-button:hover i {
+      transform: translateX(-5px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 48px; }
+      .subtitle { font-size: 22px; }
+      .colossal-titan img { max-width: 300px; }
+      .description { font-size: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 36px; }
+      .subtitle { font-size: 18px; }
+      .colossal-titan img { max-width: 200px; }
+      .description { font-size: 14px; }
+      .back-button { font-size: 14px; padding: 8px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="giant_plus_page.html" class="back-button"><i class="fas fa-arrow-left"></i> 지도로 돌아가기</a>
+  <div class="container">
+    <h1>Wall Rose</h1>
+    <div class="subtitle">트로스트 구 공방전</div>
+    <div class="colossal-titan">
+      <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDEyMjJfMTI4%2FMDAxNjA4NTcyMzUwMTYw.Ku_emD-LYxBbv5qTp2fEA2GAPL1lA9HojNJbW1W8QPsg.rFhz8RCaEjFQ8pfDny_Xu4TFNyCAEfsszKMO7wa8bnQg.JPEG.blackmun%2F1608572350363.jpg&type=sc960_832" alt="Colossal Titan Emerging">
+    </div>
+    <div class="description">
+      초대형 거인이 성벽 뒤에서 나타나며 트로스트 구를 위협.
+    </div>
+  </div>
+</body>
+</html>
