@@ -22,14 +22,15 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh; /* height: 100vh 대신 min-height로 변경 */
       display: flex;
       flex-direction: column;
       align-items: center;
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                  url('https://3.gall-img.com/tdgall/files/attach/images/82/060/343/202/c7cab7bff2cd9045efac13a69a49a518.jpg');
+      url('https://3.gall-img.com/tdgall/files/attach/images/82/060/343/202/c7cab7bff2cd9045efac13a69a49a518.jpg');
       background-size: cover;
       background-position: center;
+      background-attachment: scroll; /* fixed → scroll로 변경 */
       font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
       color: #fff;
       overflow-y: auto;
