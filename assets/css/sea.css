@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>바다 - 자유의 시작</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    @font-face {
+@font-face {
       font-family: 'Ownglyph_Binsu-Rg';
       src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
       font-weight: normal;
@@ -153,48 +145,3 @@
       .section img { max-width: 200px; }
       .back-button { font-size: 14px; padding: 8px 15px; }
     }
-  </style>
-</head>
-<body>
-  <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> 지도로 돌아가기</a>
-  <div class="container">
-    <h1>Sea</h1>
-    <div class="subtitle">자유의 시작과 운명의 갈림길</div>
-    <div class="section">
-      <h2>마레</h2>
-      <p>
-        아홉 거인 중 일곱을 『전사』로 보유하고 있으며
-        그 압도적인 힘으로 타국 침략을 계속 해옴.
-        전사 외에 육군, 해군, 비행선에 의한 항공부대가 존재함.</p>
-        <img src="https://i.namu.wiki/i/mbBFgWGJkyynjDd5ayxKU1spDVlvGBU_GSp1L6wd_wulfmuP9hE2_4Pa_9-zSW3bRhoogJYx4XA7_mfHMHbrAyoo1xsGLSYFBMUCJbW_Cv5HmBmIvw4eMigPZ3nsKMdmfQMZNOsBJrtNFerOH97Khg.webp" alt="Titan Seashore">
-    </div>
-    <div class="section">
-      <h2>에르디아</h2>
-      <p>에르디아인 - 거인화 능력을 지닌 민족.</p>
-      <p>
-        에르디아라 불리는 고대 부족의 족장인 프리츠가 시조의 거인인 유미르 프리츠와의 사이에서 세 명의 딸들을 낳음.
-        어머니가 죽은 후 딸들은 프리츠의 강압에 의해 어머니의 척추를 먹음으로써 거인의 힘을 계승하게 되고, 멈추지 않고 자식들을 낳게 됨. 
-        시간이 지나 그들의 후손이 늘어나고 에르디아 민족이 발생하였고 이 프리츠와 유미르 프리츠의 직계 후손들이 프리츠 왕가. 
-        이들 왕가는 시조 거인의 힘을 자식들에게 대물림하고 거인의 힘을 전쟁에 앞세워, 에르디아 제국을 만듦.
-      </p>
-    </div>
-    <div class="section">
-      <h2>거인화</h2>
-      <p>모든 거인의 정체는 처음으로 거인이 된 유미르 프리츠의 유전자를 물려받은 인간. 
-        유미르 프리츠의 후손인 에르디아 민족의 순수 유전자를 물려받은 인간들이며, 
-        엘디아인과 타국인 사이에서 태어난 혼혈 또한 거인화 가능한 인간의 범주에 포괄됨.
-      </p>
-      <img src="https://i.namu.wiki/i/9sG4fMliwczY79a_2CLzV8xNv19GJGzVG-QEiHDHOm_ncSpocfzR_Gl-zuvZMdZCqMZWumA8ztlZblWzvqVHkw.gif" alt="Titan Transformation">
-    </div>
-    <div class="section">
-      <h2>땅울림</h2>
-      <p>
-        칼 프리츠가 시조 거인의 힘으로 파라디 섬에서 방벽(월 마리아, 월 로제, 월 시나)을 만들 때 
-        타국의 침공을 막기 위해 수천만의 초대형 거인들을 방벽에 집어넣음.
-        고열의 증기를 내뿜는 이 거인들을 진격시켜서 전 세계의 모든 문명과 대륙을 짓밟아 파괴하여 
-        아무것도 없는 평평한 땅으로 만듦으로써 방벽 밖 모든 국가와 생물을 절멸시키는 행위.</p>
-      <img src="https://i.namu.wiki/i/dcRTJCvo14iyS10IuksMgBoq7hhx57e9f3_XzN3DbjAEg7SjBl0gJz6cR_OEyoYTCaE-uQ9GgIGy9xcCtW67hg.webp" alt="The Rumbling">
-    </div>
-  </div>
-</body>
-</html>
