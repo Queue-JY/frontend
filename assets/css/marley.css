@@ -1,0 +1,156 @@
+@font-face {
+      font-family: 'TTHakgyoansimMulgyeolB';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Ownglyph_Binsu-Rg';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://i.namu.wiki/i/3KPXaPvVDDDIONXZIa13kNTNZgAQfY5E8nNyMUsqJEIsHN8ZiYX_xJfqgCUdIiabmHhkIcNtvANW3taYCuUlVg.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+      color: #fff;
+      overflow-y: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+      margin: 0 0 10px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      color: #ffcc00;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+      animation: fadeInText 1.2s ease-in-out;
+    }
+
+    .titans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .titan {
+      background: rgba(60, 47, 47, 0.8);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .titan:hover {
+      transform: scale(1.05);
+      background: rgba(92, 64, 51, 0.8);
+    }
+
+    .titan img {
+      width: 220px;
+      height: 240px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .titan h3 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .titan p {
+      font-size: 16px;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: #3c2f2f;
+      color: #ffcc00;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 1000;
+      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+    }
+
+    .back-button i {
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: scale(1.05);
+      background: #5c4033;
+    }
+
+    .back-button:hover i {
+      transform: translateX(-5px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 48px; }
+      .subtitle { font-size: 22px; }
+      .titans { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      .titan img { max-width: 150px; }
+      .titan h3 { font-size: 18px; }
+      .titan p { font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 36px; }
+      .subtitle { font-size: 18px; }
+      .titans { grid-template-columns: 1fr; }
+      .titan img { max-width: 120px; }
+      .titan h3 { font-size: 16px; }
+      .titan p { font-size: 12px; }
+      .back-button { font-size: 14px; padding: 8px 15px; }
+    }
