@@ -9,48 +9,70 @@
 </head>
 <script>
   function toggleColossal() {
-    const reveal = document.getElementById('colossalReveal');
-    reveal.style.display =
-      reveal.style.display === 'none' || reveal.style.display === ''
-        ? 'block'
-        : 'none';
+    const content = document.getElementById('colossalReveal');
+
+    if (content.classList.contains('show')) {
+      content.classList.remove('show');
+    } else {
+      content.classList.add('show');
+    }
+  }
+  function toggleWarrior(revealId, cardId) {
+    const reveal = document.getElementById(revealId);
+    const card = document.getElementById(cardId);
+
+    const isOpen = reveal.classList.toggle('show');
+    card.classList.toggle('revealed', isOpen);
   }
 </script>
 <body>
-  <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> 지도로 돌아가기</a>
+  <a href="../index.html" class="back-button">
+    <i class="fas fa-arrow-left"></i> 지도로 돌아가기
+  </a>
+
   <div class="container">
     <h1>Wall Rose</h1>
     <div class="subtitle">트로스트 구 공방전</div>
     <div class="colossal-titan">
-      <img src="../assets/images/rose/very_big_giant.webp" alt="Colossal Titan Emerging">
+      <img src="../assets/images/rose/very_big_giant.webp">
     </div>
     <div class="description">
-      초대형 거인이 성벽 뒤에서 나타나며 트로스트 구를 위협.
+      초대형 거인이 성벽 뒤에서 나타나며 트로스트 구를 위협
     </div>
-        <!-- 정체 공개 섹션 -->
     <div class="reveal-section">
       <button class="reveal-button" onclick="toggleColossal()">
         초대형 거인의 정체는?
       </button>
 
       <div id="colossalReveal" class="reveal-content">
-        <img src="../assets/images/rose/bertolt.webp" alt="초대형 거인의 정체 이미지">
-        <!-- 나중에 이미지 src 교체 -->
+        <p>정체: 베를톨트 후버</p>
+        <img src="../assets/images/rose/bertolt.webp">
       </div>
     </div>
 
-    <!-- 라이너 & 베를톨트 섹션 -->
     <div class="warrior-section">
-      <div class="warrior-card">
-        <h2>라이너 브라운</h2>
-        <p>정체: 갑옷 거인</p>
-        <img src="../assets/images/rose/riener_bertolt.jpg" alt="라이너 갑옷 거인">
+      <div class="warrior-card" id="reinerCard">
+        <h2>갑옷 거인</h2>
+        <button class="reveal-button small"
+          onclick="toggleWarrior('reinerReveal','reinerCard')">
+          정체 공개
+        </button>
+        <div id="reinerReveal" class="reveal-content">
+          <p>정체: 라이너 브라운</p>
+          <img src="../assets/images/rose/riener_bertolt.jpg">
+        </div>
       </div>
 
-      <div class="warrior-card">
-        <h2>베를톨트 후버</h2>
-        <p>정체: 초대형 거인</p>
-        <img src="../assets/images/rose/bertolt_reiner.webp" alt="베를톨트 초대형 거인">
+      <div class="warrior-card" id="bertoltCard">
+        <h2>초대형 거인</h2>
+        <button class="reveal-button small"
+          onclick="toggleWarrior('bertoltReveal','bertoltCard')">
+          정체 공개
+        </button>
+        <div id="bertoltReveal" class="reveal-content">
+          <p>정체: 베를톨트 후버</p>
+          <img src="../assets/images/rose/bertolt_reiner.webp">
+        </div>
       </div>
     </div>
   </div>

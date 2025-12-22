@@ -196,3 +196,38 @@
       .member img { width: 100px; height: 100px; }
       .member p { font-size: 12px; }
     }
+    .reveal-section {
+    margin-top: 80px;
+    text-align: center;
+    }
+
+    .reveal-button {
+    font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
+    font-size: 24px;
+    padding: 15px 30px;
+    background: #8b0000;
+    color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .reveal-button:hover {
+    background: #b22222;
+    transform: scale(1.05);
+    }
+
+    /* 숨겨진 콘텐츠 */
+    .reveal-content {
+    margin-top: 30px;
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .reveal-content img {
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    }

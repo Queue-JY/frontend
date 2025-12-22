@@ -1,207 +1,196 @@
 @font-face {
-      font-family: 'TTHakgyoansimMulgyeolB';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Ownglyph_Binsu-Rg';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
+  font-family: 'TTHakgyoansimMulgyeolB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20130513_104%2Flollipop623_1368409205075frrKk_JPEG%2F2.jpg&type=sc960_832');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
-      color: #fff;
-      overflow-y: auto;
-    }
+@font-face {
+  font-family: 'Ownglyph_Binsu-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20130513_104%2Flollipop623_1368409205075frrKk_JPEG%2F2.jpg&type=sc960_832');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+  color: #fff;
+}
 
-    h1 {
-      font-size: 100px;
-      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
-      margin: 0 0 10px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-      color: #ffcc00;
-      animation: slideIn 0.8s ease-out;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .subtitle {
-      font-size: 28px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 40px;
-      animation: fadeInText 1.2s ease-in-out;
-    }
+h1 {
+  font-size: 100px;
+  color: #ffcc00;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+  animation: slideDown 0.9s ease-out;
+}
 
-    .colossal-titan {
-      margin-bottom: 40px;
-    }
+.subtitle {
+  font-size: 28px;
+  margin-bottom: 40px;
+  animation: fadeUp 1.2s ease-in-out;
+}
 
-    .colossal-titan img {
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-      animation: zoomIn 1s ease-in-out;
-    }
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: #3c2f2f;
+  color: #ffcc00;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+}
 
-    .description {
-      font-size: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      animation: fadeInText 1.5s ease-in-out;
-    }
+.back-button:hover {
+  background: #5c4033;
+  transform: scale(1.05);
+}
 
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #3c2f2f;
-      color: #ffcc00;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-      z-index: 1000;
-      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
-    }
+.colossal-titan img,
+.female-titan img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  animation: zoomIn 1s ease-in-out;
+}
 
-    .back-button i {
-      transition: transform 0.3s ease;
-    }
+.description {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  animation: fadeUp 1.3s ease-in-out;
+}
 
-    .back-button:hover {
-      transform: scale(1.05);
-      background: #5c4033;
-    }
+.reveal-section {
+  margin-top: 80px;
+  text-align: center;
+}
 
-    .back-button:hover i {
-      transform: translateX(-5px);
-    }
+.reveal-button {
+  font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
+  font-size: 24px;
+  padding: 15px 30px;
+  background: #8b0000;
+  color: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+.reveal-button:hover {
+  background: #b22222;
+  transform: scale(1.05);
+}
 
-    @keyframes slideIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+.reveal-content {
+  display: none;
+  margin-top: 30px;
+  animation: fadeUp 0.8s ease-in-out;
+}
 
-    @keyframes fadeInText {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.reveal-content.show {
+  display: block;
+}
 
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+.reveal-content img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
 
-    @media (max-width: 768px) {
-      h1 { font-size: 48px; }
-      .subtitle { font-size: 22px; }
-      .colossal-titan img { max-width: 300px; }
-      .description { font-size: 16px; }
-    }
+.warrior-section {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  animation: fadeUp 1.2s ease-in-out;
+}
 
-    @media (max-width: 480px) {
-      h1 { font-size: 36px; }
-      .subtitle { font-size: 18px; }
-      .colossal-titan img { max-width: 200px; }
-      .description { font-size: 14px; }
-      .back-button { font-size: 14px; padding: 8px 15px; }
-    }
-    /* 정체 공개 버튼 */
-    .reveal-section {
-    margin-top: 80px;
-    text-align: center;
-    }
+.warrior-card {
+  width: 300px;
+  background: rgba(0,0,0,0.6);
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.4s ease, background 0.6s ease;
+}
 
-    .reveal-button {
-    font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
-    font-size: 24px;
-    padding: 15px 30px;
-    background: #8b0000;
-    color: #ffcc00;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease, background 0.3s ease;
-    }
+.warrior-card:hover {
+  transform: scale(1.05);
+}
 
-    .reveal-button:hover {
-    background: #b22222;
-    transform: scale(1.05);
-    }
+.warrior-card.revealed {
+  background: linear-gradient(
+    135deg,
+    rgba(139,0,0,0.85),
+    rgba(60,0,0,0.9)
+  );
+}
 
-    /* 숨겨진 콘텐츠 */
-    .reveal-content {
-    margin-top: 30px;
-    display: none;
-    animation: fadeIn 0.8s ease-in-out;
-    }
+.warrior-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-    .reveal-content img {
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    /* 라이너 & 베를톨트 */
-    .warrior-section {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    }
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-    .warrior-card {
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.7);
-    }
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-    .warrior-card h2 {
-    font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
-    font-size: 28px;
-    color: #ffcc00;
-    margin-bottom: 10px;
-    }
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-    .warrior-card p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    }
-
-    .warrior-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    }
+@media (max-width: 768px) {
+  h1 { font-size: 48px; }
+  .subtitle { font-size: 22px; }
+  .description { font-size: 16px; }
+  .warrior-card { width: 90%; }
+}
