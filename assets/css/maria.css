@@ -379,16 +379,16 @@ h1 {
   @keyframes launchHook {
     0% { top: 5%; left: -20px; opacity: 0; }
     10% { opacity: 1; }
-    30% { top: 70%; left: 80%; } /* 모바일 화면 안쪽으로 꽂히게 조정 */
-    80% { top: 70%; left: 80%; opacity: 1; }
-    100% { top: 70%; left: 80%; opacity: 0; }
+    30% { top: 80%; left: 90%; } /* 모바일 화면 안쪽으로 꽂히게 조정 */
+    80% { top: 80%; left: 90%; opacity: 1; }
+    100% { top: 80%; left: 90%; opacity: 0; }
   }
 
   @keyframes drawWire {
     0% { top: 5%; left: 0; width: 0; transform: rotate(50deg); opacity: 0; }
     10% { opacity: 1; }
-    30% { width: 100%; transform: rotate(50deg); } /* 각도를 더 가파르게 */
-    80% { width: 100%; opacity: 1; }
-    100% { width: 100%; opacity: 0; }
+    30% { width: 120%; transform: rotate(50deg); } /* 각도를 더 가파르게 */
+    80% { width: 120%; opacity: 1; }
+    100% { width: 120%; opacity: 0; }
   }
 }
