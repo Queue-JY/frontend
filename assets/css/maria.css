@@ -273,3 +273,102 @@ h1 {
     gap: 8px;
   }
 }
+/* 입체기동장치 설명 카드 스타일 */
+.vme-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.vme-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.vme-card:hover {
+  background: rgba(40, 40, 40, 0.9);
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+}
+
+.vme-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.vme-header h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.vme-card p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* 앵커 날아가는 애니메이션 */
+.anchor-animation {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* 클릭 방해 금지 */
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hook {
+  position: absolute;
+  font-size: 30px;
+  color: #888;
+  transform: rotate(135deg);
+  filter: drop-shadow(0 0 5px black);
+  animation: launchHook 6s infinite ease-in-out;
+}
+
+.wire {
+  position: absolute;
+  height: 2px;
+  background: rgba(200, 200, 200, 0.5);
+  transform-origin: top left;
+  animation: drawWire 6s infinite ease-in-out;
+}
+
+/* 앵커가 왼쪽 위에서 오른쪽 아래로 발사되는 애니메이션 */
+@keyframes launchHook {
+  0% { top: 10%; left: -50px; opacity: 0; }
+  10% { opacity: 1; }
+  30% { top: 80%; left: 90%; } /* 꽂히는 지점 */
+  80% { top: 80%; left: 90%; opacity: 1; }
+  100% { top: 80%; left: 90%; opacity: 0; }
+}
+
+@keyframes drawWire {
+  0% { top: 10%; left: 0; width: 0; transform: rotate(35deg); opacity: 0; }
+  10% { opacity: 1; }
+  30% { width: 120%; transform: rotate(35deg); }
+  80% { width: 120%; opacity: 1; }
+  100% { width: 120%; opacity: 0; }
+}
+
+/* 모바일에서는 애니메이션 단순화 또는 숨김 */
+@media (max-width: 768px) {
+  .vme-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  .anchor-animation { display: none; }
+}
