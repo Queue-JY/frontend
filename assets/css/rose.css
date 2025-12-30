@@ -16,20 +16,20 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20130513_104%2Flollipop623_1368409205075frrKk_JPEG%2F2.jpg&type=sc960_832');
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20130513_104%2Flollipop623_1368409205075frrKk_JPEG%2F2.jpg&type=sc960_832');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
   color: #fff;
+  overflow-y: auto;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 100px 20px 40px; /* 상단 여유 증가로 back-button 겹침 방지 */
   text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
@@ -37,76 +37,94 @@ body {
 h1 {
   font-size: 100px;
   color: #ffcc00;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  margin: 0 0 20px;
   animation: slideDown 0.9s ease-out;
 }
 
 .subtitle {
   font-size: 28px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
   animation: fadeUp 1.2s ease-in-out;
 }
 
 .back-button {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background: #3c2f2f;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(60, 47, 47, 0.95);
   color: #ffcc00;
+  font-size: 20px;
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
   text-decoration: none;
-  border-radius: 6px;
-  font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease, background 0.3s ease;
   z-index: 1000;
 }
 
 .back-button:hover {
-  background: #5c4033;
-  transform: scale(1.05);
+  background: rgba(92, 64, 51, 0.95);
+  transform: scale(1.1);
+}
+
+.back-button i {
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover i {
+  transform: translateX(-8px);
 }
 
 .colossal-titan img,
 .female-titan img {
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
   animation: zoomIn 1s ease-in-out;
 }
 
 .description {
-  font-size: 20px;
-  max-width: 800px;
-  margin: 30px auto;
+  font-size: 22px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  line-height: 1.6;
   animation: fadeUp 1.3s ease-in-out;
 }
 
 .reveal-section {
-  margin-top: 80px;
+  margin-top: 100px;
   text-align: center;
 }
 
 .reveal-button {
-  font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
-  font-size: 24px;
-  padding: 15px 30px;
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+  font-size: 26px;
+  padding: 18px 36px;
   background: #8b0000;
   color: #ffcc00;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .reveal-button:hover {
   background: #b22222;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .reveal-content {
   display: none;
-  margin-top: 30px;
+  margin-top: 40px;
   animation: fadeUp 0.8s ease-in-out;
 }
 
@@ -115,45 +133,57 @@ h1 {
 }
 
 .reveal-content img {
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .warrior-section {
-  margin-top: 100px;
+  margin-top: 120px;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 50px;
   flex-wrap: wrap;
+  padding: 0 10px;
   animation: fadeUp 1.2s ease-in-out;
 }
 
 .warrior-card {
-  width: 300px;
-  background: rgba(0,0,0,0.6);
-  padding: 25px;
-  border-radius: 12px;
+  width: 320px;
+  background: rgba(60, 47, 47, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
   transition: transform 0.4s ease, background 0.6s ease;
 }
 
 .warrior-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .warrior-card.revealed {
-  background: linear-gradient(
-    135deg,
-    rgba(139,0,0,0.85),
-    rgba(60,0,0,0.9)
-  );
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(80, 0, 0, 0.95));
 }
 
 .warrior-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.warrior-card h3 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.warrior-card p {
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 @keyframes fadeIn {
@@ -167,30 +197,107 @@ h1 {
 }
 
 @keyframes slideDown {
-  from {
-    transform: translateY(-60px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fadeUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 모바일 최적화 강화 */
+@media (max-width: 768px) {
+  .container {
+    padding: 120px 15px 40px;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  h1 {
+    font-size: 56px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .reveal-button {
+    font-size: 22px;
+    padding: 16px 32px;
+  }
+
+  .warrior-section {
+    gap: 40px;
+    padding: 0 5px;
+  }
+
+  .warrior-card {
+    width: 90%;
+    max-width: 350px;
+    padding: 25px;
+  }
+
+  .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 10px;
+    left: 10px;
   }
 }
 
-@media (max-width: 768px) {
-  h1 { font-size: 48px; }
-  .subtitle { font-size: 22px; }
-  .description { font-size: 16px; }
-  .warrior-card { width: 90%; }
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 10px 30px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 17px;
+    margin: 30px auto;
+  }
+
+  .reveal-section {
+    margin-top: 80px;
+  }
+
+  .reveal-button {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+
+  .warrior-section {
+    margin-top: 100px;
+    gap: 35px;
+  }
+
+  .warrior-card {
+    padding: 20px;
+  }
+
+  .warrior-card h3 {
+    font-size: 22px;
+  }
+
+  .warrior-card p {
+    font-size: 16px;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
 }

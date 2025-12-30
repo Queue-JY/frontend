@@ -1,147 +1,210 @@
 @font-face {
-      font-family: 'Ownglyph_Binsu-Rg';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'TTHakgyoansimMulgyeolB';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
-    }
+  font-family: 'Ownglyph_Binsu-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/6ozg/image/LvvPHclbRrqqPN0SSFYBLh6Ldo8.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
-      color: #fff;
-      overflow-y: auto;
-    }
+@font-face {
+  font-family: 'TTHakgyoansimMulgyeolB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/6ozg/image/LvvPHclbRrqqPN0SSFYBLh6Ldo8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+  color: #fff;
+  overflow-y: auto;
+}
 
-    h1 {
-      font-size: 100px;
-      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
-      margin: 0 0 10px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-      color: #ffcc00;
-      animation: slideIn 0.8s ease-out;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px; /* 상단 여유 증가로 back-button과 겹침 방지 */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .subtitle {
-      font-size: 28px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 40px;
-      animation: fadeInText 1.2s ease-in-out;
-    }
+h1 {
+  font-size: 100px;
+  font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+  margin: 0 0 20px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  color: #ffcc00;
+  animation: slideIn 0.8s ease-out;
+}
 
-    .section {
-      margin-bottom: 60px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.subtitle {
+  font-size: 28px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 50px;
+  animation: fadeInText 1.2s ease-in-out;
+}
 
-    .section h2 {
-      font-size: 32px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 20px;
-      color: #ffcc00;
-    }
+.section {
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(60, 47, 47, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
 
-    .section p {
-      font-size: 18px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-      line-height: 1.5;
-    }
+.section h2 {
+  font-size: 36px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 25px;
+  color: #ffcc00;
+}
 
-    .section img {
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-      margin-top: 20px;
-      animation: zoomIn 1s ease-in-out;
-    }
+.section p {
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
 
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #3c2f2f;
-      color: #ffcc00;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-      z-index: 1000;
-      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
-    }
+.section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  margin-top: 25px;
+  animation: zoomIn 1s ease-in-out;
+}
 
-    .back-button i {
-      transition: transform 0.3s ease;
-    }
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(60, 47, 47, 0.95);
+  color: #ffcc00;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+}
 
-    .back-button:hover {
-      transform: scale(1.05);
-      background: #5c4033;
-    }
+.back-button:hover {
+  transform: scale(1.1);
+  background: rgba(92, 64, 51, 0.95);
+}
 
-    .back-button:hover i {
-      transform: translateX(-5px);
-    }
+.back-button:hover i {
+  transform: translateX(-8px);
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes slideIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes fadeInText {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-    @media (max-width: 768px) {
-      h1 { font-size: 48px; }
-      .subtitle { font-size: 22px; }
-      .section h2 { font-size: 26px; }
-      .section p { font-size: 16px; }
-      .section img { max-width: 300px; }
-    }
+/* 모바일 최적화 강화 */
+@media (max-width: 768px) {
+  .container {
+    padding: 120px 15px 50px;
+  }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 36px; }
-      .subtitle { font-size: 18px; }
-      .section h2 { font-size: 22px; }
-      .section p { font-size: 14px; }
-      .section img { max-width: 200px; }
-      .back-button { font-size: 14px; padding: 8px 15px; }
-    }
+  h1 {
+    font-size: 56px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .section {
+    margin-bottom: 60px;
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .section p {
+    font-size: 18px;
+  }
+
+  .section img {
+    max-width: 100%;
+  }
+
+  .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 10px 40px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+}

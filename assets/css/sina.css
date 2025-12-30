@@ -1,233 +1,319 @@
 @font-face {
-      font-family: 'TTHakgyoansimMulgyeolB';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Ownglyph_Binsu-Rg';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
+  font-family: 'TTHakgyoansimMulgyeolB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://mblogthumb-phinf.pstatic.net/MjAyMjAxMjZfMjcx/MDAxNjQzMTMzNzA1NDAx.v5sCOR4JYCTcWTztrg4QIEfHGZMBzGeV3OE9O1nmgPAg.XDonTKx1G-nney4r4KFsT_vLIxBzQkNxLEj6TKBg4dYg.JPEG.sogno84/Zero-Raws_Shingeki_no_Kyojin_-_19_(MBS_1280x720_x264_AAC).mp4_001313854.jpg?type=w800');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
-      color: #fff;
-      overflow-y: auto;
-    }
+@font-face {
+  font-family: 'Ownglyph_Binsu-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('https://mblogthumb-phinf.pstatic.net/MjAyMjAxMjZfMjcx/MDAxNjQzMTMzNzA1NDAx.v5sCOR4JYCTcWTztrg4QIEfHGZMBzGeV3OE9O1nmgPAg.XDonTKx1G-nney4r4KFsT_vLIxBzQkNxLEj6TKBg4dYg.JPEG.sogno84/Zero-Raws_Shingeki_no_Kyojin_-_19_(MBS_1280x720_x264_AAC).mp4_001313854.jpg?type=w800');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+  color: #fff;
+  overflow-y: auto;
+}
 
-    h1 {
-      font-size: 100px;
-      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
-      margin: 0 0 10px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-      color: #ffcc00;
-      animation: slideIn 0.8s ease-out;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px; /* 상단 여유 증가 */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .subtitle {
-      font-size: 28px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 40px;
-      animation: fadeInText 1.2s ease-in-out;
-    }
+h1 {
+  font-size: 100px;
+  font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+  margin: 0 0 20px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  color: #ffcc00;
+  animation: slideIn 0.8s ease-out;
+}
 
-    .female-titan {
-      margin-bottom: 40px;
-    }
+.subtitle {
+  font-size: 28px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 50px;
+  animation: fadeInText 1.2s ease-in-out;
+}
 
-    .female-titan img {
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-      animation: zoomIn 1s ease-in-out;
-    }
+.female-titan {
+  margin-bottom: 50px;
+}
 
-    .description {
-      font-size: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      animation: fadeInText 1.5s ease-in-out;
-    }
+.female-titan img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  animation: zoomIn 1s ease-in-out;
+}
 
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #3c2f2f;
-      color: #ffcc00;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-      z-index: 1000;
-      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
-    }
+.description {
+  font-size: 22px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  line-height: 1.7;
+  animation: fadeInText 1.5s ease-in-out;
+}
 
-    .back-button i {
-      transition: transform 0.3s ease;
-    }
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(60, 47, 47, 0.95);
+  color: #ffcc00;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+}
 
-    .back-button:hover {
-      transform: scale(1.05);
-      background: #5c4033;
-    }
+.back-button:hover {
+  transform: scale(1.1);
+  background: rgba(92, 64, 51, 0.95);
+}
 
-    .back-button:hover i {
-      transform: translateX(-5px);
-    }
+.back-button:hover i {
+  transform: translateX(-8px);
+}
 
-    .levi-squad {
-      margin-top: 60px;
-      animation: fadeIn 1s ease-in-out;
-    }
+.levi-squad {
+  margin-top: 80px;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .squad-title {
-      font-size: 36px;
-      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
-      color: #ffcc00;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      margin-bottom: 30px;
-      animation: slideIn 0.8s ease-out;
-    }
+.squad-title {
+  font-size: 40px;
+  font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+  color: #ffcc00;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 40px;
+  animation: slideIn 0.8s ease-out;
+}
 
-    .squad-members {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
-      gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+.squad-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
-    .member {
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
+.member {
+  text-align: center;
+  background: rgba(60, 47, 47, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
 
-    .member:hover {
-      transform: scale(1.05);
-    }
+.member:hover {
+  transform: scale(1.08);
+  background: rgba(92, 64, 51, 0.9);
+}
 
-    .member img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      animation: zoomIn 1s ease-in-out;
-    }
+.member img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  animation: zoomIn 1s ease-in-out;
+}
 
-    .member p {
-      font-size: 16px;
-      margin: 10px 0 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    }
+.member p {
+  font-size: 18px;
+  margin: 15px 0 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  color: #ffcc00;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+.reveal-section {
+  margin-top: 100px;
+  text-align: center;
+}
 
-    @keyframes slideIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+.reveal-button {
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+  font-size: 26px;
+  padding: 18px 36px;
+  background: #8b0000;
+  color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
 
-    @keyframes fadeInText {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.reveal-button:hover {
+  background: #b22222;
+  transform: scale(1.08);
+}
 
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+.reveal-content {
+  margin-top: 40px;
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+}
 
-    @media (max-width: 768px) {
-      h1 { font-size: 48px; }
-      .subtitle { font-size: 22px; }
-      .female-titan img { max-width: 300px; }
-      .description { font-size: 16px; }
-      .squad-title { font-size: 28px; }
-      .squad-members {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-      }
-      .member img { width: 120px; height: 120px; }
-      .member p { font-size: 14px; }
-    }
+.reveal-content.show {
+  display: block;
+}
 
-    @media (max-width: 480px) {
-      h1 { font-size: 36px; }
-      .subtitle { font-size: 18px; }
-      .female-titan img { max-width: 200px; }
-      .description { font-size: 14px; }
-      .back-button { font-size: 14px; padding: 8px 15px; }
-      .squad-title { font-size: 22px; }
-      .squad-members {
-        grid-template-columns: repeat(2, 1fr); /* 작은 화면에서는 2열로 변경 */
-        gap: 10px;
-      }
-      .member img { width: 100px; height: 100px; }
-      .member p { font-size: 12px; }
-    }
-    .reveal-section {
-    margin-top: 80px;
-    text-align: center;
-    }
+.reveal-content img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
 
-    .reveal-button {
-    font-family: 'TTHakgyoansimMulgyeolB', sans-serif;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 모바일 최적화 강화 */
+@media (max-width: 768px) {
+  .container {
+    padding: 120px 15px 50px;
+  }
+
+  h1 {
+    font-size: 56px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .subtitle {
     font-size: 24px;
-    padding: 15px 30px;
-    background: #8b0000;
-    color: #ffcc00;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease, background 0.3s ease;
-    }
+  }
 
-    .reveal-button:hover {
-    background: #b22222;
-    transform: scale(1.05);
-    }
+  .description {
+    font-size: 18px;
+    padding: 0 10px;
+  }
 
-    /* 숨겨진 콘텐츠 */
-    .reveal-content {
-    margin-top: 30px;
-    display: none;
-    animation: fadeIn 0.8s ease-in-out;
-    }
+  .squad-title {
+    font-size: 32px;
+  }
 
-    .reveal-content img {
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-    }
+  .squad-members {
+    gap: 25px;
+    padding: 0 5px;
+  }
+
+  .member {
+    padding: 18px;
+  }
+
+  .member p {
+    font-size: 17px;
+  }
+
+  .reveal-button {
+    font-size: 22px;
+    padding: 16px 32px;
+  }
+
+  .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 10px 40px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .female-titan img,
+  .reveal-content img {
+    max-width: 100%;
+  }
+
+  .squad-title {
+    font-size: 28px;
+  }
+
+  .squad-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .member p {
+    font-size: 16px;
+  }
+
+  .reveal-section {
+    margin-top: 80px;
+  }
+
+  .reveal-button {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+}

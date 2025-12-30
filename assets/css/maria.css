@@ -1,226 +1,275 @@
 @font-face {
-      font-family: 'TTHakgyoansimMulgyeolB';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Ownglyph_Binsu-Rg';
-      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-    }
+  font-family: 'TTHakgyoansimMulgyeolB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh; /* height: 100vh 대신 min-height로 변경 */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-      url('https://3.gall-img.com/tdgall/files/attach/images/82/060/343/202/c7cab7bff2cd9045efac13a69a49a518.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: scroll; /* fixed → scroll로 변경 */
-      font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
-      color: #fff;
-      overflow-y: auto;
-    }
+@font-face {
+  font-family: 'Ownglyph_Binsu-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_Binsu-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    .container {
-      text-align: center;
-      max-width: 1200px;
-      padding: 80px 20px 20px;
-      animation: fadeIn 1s ease-in-out;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('https://3.gall-img.com/tdgall/files/attach/images/82/060/343/202/c7cab7bff2cd9045efac13a69a49a518.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  font-family: 'Ownglyph_Binsu-Rg', Arial, sans-serif;
+  color: #fff;
+  overflow-y: auto;
+}
 
-    h1 {
-      font-size: 100px;
-      font-family: 'Ownglyph_Binsu-Rg', sans-serif;
-      margin: 0 0 10px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-      color: #ffcc00;
-      animation: slideIn 0.8s ease-out;
-    }
+.container {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 100px 20px 40px; /* 상단 여유 증가로 back-button과 겹침 방지 */
+  animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box;
+}
 
-    .subtitle {
-      font-size: 28px;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      animation: fadeInText 1.2s ease-in-out;
-    }
+h1 {
+  font-size: 100px;
+  font-family: 'Ownglyph_Binsu-Rg', sans-serif;
+  margin: 0 0 20px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+  color: #ffcc00;
+  animation: slideIn 0.8s ease-out;
+}
 
-    .main-characters {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 50px;
-    }
+.subtitle {
+  font-size: 28px;
+  margin-bottom: 50px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  animation: fadeInText 1.2s ease-in-out;
+}
 
-    .character {
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
+.main-characters {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* 모바일 대비 추가 */
+}
 
-    .character:hover {
-      transform: scale(1.05);
-    }
+.character {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
 
-    .character img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+.character:hover {
+  transform: scale(1.08);
+}
 
-    .character p {
-      font-size: 20px;
-      margin: 10px 0 0;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    }
+.character img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
 
-    .other-members {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+.character p {
+  font-size: 24px;
+  margin: 15px 0 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  color: #ffcc00;
+}
 
-    .member {
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
+.other-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
-    .member:hover {
-      transform: scale(1.05);
-    }
+.member {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background: rgba(60, 47, 47, 0.7);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
 
-    .member img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    }
+.member:hover {
+  transform: scale(1.08);
+  background: rgba(92, 64, 51, 0.8);
+}
 
-    .member p {
-      font-size: 16px;
-      margin: 8px 0 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    }
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
 
-    .back-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #3c2f2f;
-      color: #ffcc00;
-      font-size: 18px;
-      font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
-      text-decoration: none;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-      z-index: 1000;
-    }
+.member p {
+  font-size: 18px;
+  margin: 12px 0 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
 
-    .back-button i {
-      transition: transform 0.3s ease;
-    }
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(60, 47, 47, 0.95);
+  color: #ffcc00;
+  font-size: 20px;
+  font-family: 'TTHakgyoansimMulgyeolB', Arial, sans-serif;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+}
 
-    .back-button:hover {
-      transform: scale(1.05);
-      background: #5c4033;
-    }
+.back-button:hover {
+  transform: scale(1.1);
+  background: rgba(92, 64, 51, 0.95);
+}
 
-    .back-button:hover i {
-      transform: translateX(-5px);
-    }
+.back-button:hover i {
+  transform: translateX(-8px);
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes fadeInText {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 40px;
-      }
-      .subtitle {
-        font-size: 20px;
-      }
-      .main-characters {
-        flex-direction: column;
-        gap: 20px;
-      }
-      .character img {
-        width: 150px;
-        height: 150px;
-      }
-      .other-members {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .member img {
-        width: 80px;
-        height: 80px;
-      }
-    }
+/* 모바일 최적화 강화 */
+@media (max-width: 768px) {
+  .container {
+    padding: 120px 15px 40px;
+  }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 32px;
-      }
-      .subtitle {
-        font-size: 16px;
-      }
-      .character img {
-        width: 120px;
-        height: 120px;
-      }
-      .other-members {
-        grid-template-columns: 1fr;
-      }
-      .member img {
-        width: 70px;
-        height: 70px;
-      }
-      .back-button {
-        font-size: 14px;
-        padding: 8px 15px;
-      }
-    }
+  h1 {
+    font-size: 56px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .main-characters {
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .character img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .character p {
+    font-size: 22px;
+  }
+
+  .other-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .member img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member p {
+    font-size: 17px;
+  }
+
+  .back-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 100px 10px 30px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .main-characters {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .character img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+  }
+
+  .character p {
+    font-size: 20px;
+  }
+
+  .other-members {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .member {
+    padding: 18px;
+  }
+
+  .member img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .member p {
+    font-size: 18px;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+}
