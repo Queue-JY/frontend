@@ -364,11 +364,31 @@ h1 {
   100% { width: 120%; opacity: 0; }
 }
 
-/* 모바일에서는 애니메이션 단순화 또는 숨김 */
+/* 모바일에서도 애니메이션이 보이도록 수정 */
 @media (max-width: 768px) {
   .vme-card {
     padding: 20px;
     margin: 0 10px;
   }
-  .anchor-animation { display: none; }
+
+  /* 모바일용 앵커 애니메이션 조정 */
+  .anchor-animation {
+    display: block; /* 보이게 설정 */
+  }
+
+  @keyframes launchHook {
+    0% { top: 5%; left: -20px; opacity: 0; }
+    10% { opacity: 1; }
+    30% { top: 70%; left: 80%; } /* 모바일 화면 안쪽으로 꽂히게 조정 */
+    80% { top: 70%; left: 80%; opacity: 1; }
+    100% { top: 70%; left: 80%; opacity: 0; }
+  }
+
+  @keyframes drawWire {
+    0% { top: 5%; left: 0; width: 0; transform: rotate(50deg); opacity: 0; }
+    10% { opacity: 1; }
+    30% { width: 100%; transform: rotate(50deg); } /* 각도를 더 가파르게 */
+    80% { width: 100%; opacity: 1; }
+    100% { width: 100%; opacity: 0; }
+  }
 }
