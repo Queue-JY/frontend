@@ -252,3 +252,48 @@
         width: 95vmin;
       }
     }
+    .site-footer {
+      width: 100%;
+      background: rgba(30, 20, 15, 0.92);
+      border-top: 0.3vmin solid #3c2f2f;
+      padding: 1.5vmin 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+    }
+    
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3vmin;
+      font-size: 1.4vmin;
+      color: rgba(224, 224, 224, 0.7);
+      letter-spacing: 0.05vmin;
+    }
+    
+    .footer-visitors i {
+      color: #c0392b;
+      margin-right: 0.4vmin;
+    }
+    
+    .footer-copy strong {
+      color: #e0e0e0;
+    }
+    
+    .footer-made i {
+      color: #c0392b;
+      margin: 0 0.3vmin;
+    }
+    
+    @media (max-width: 480px) {
+      .footer-inner {
+        flex-direction: column;
+        gap: 0.8vmin;
+        font-size: 2.2vmin;
+        text-align: center;
+      }
+    }
