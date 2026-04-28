@@ -252,11 +252,11 @@
         width: 95vmin;
       }
     }
-   .site-footer {
+     .site-footer {
       width: 100%;
-      background: rgba(15, 10, 8, 0.97);
-      border-top: 1px solid #2a1f1a;
-      padding: 1vmin 0;
+      background: rgba(20, 13, 10, 0.95);
+      border-top: 0.3vmin solid #3c2f2f;
+      padding: 1.2vmin 0;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -270,28 +270,25 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 3vmin;
-      font-size: 1vmin;
-      color: rgba(180, 170, 160, 0.4);
-      letter-spacing: 0.08vmin;
+      font-size: 1.2vmin;
+      color: rgba(200, 200, 200, 0.6);
+      letter-spacing: 0.03vmin;
     }
     
     .footer-visitors i {
-      color: rgba(150, 40, 40, 0.6);
+      color: #c0392b;
       margin-right: 0.4vmin;
     }
     
-    .footer-copy {
-      font-size: 0.9vmin;
+    .footer-copy strong {
+      color: #e0e0e0;
     }
     
     @media (max-width: 768px) {
       .footer-inner {
         flex-direction: column;
-        gap: 0.5vmin;
+        gap: 0.8vmin;
         font-size: 1.8vmin;
         text-align: center;
-      }
-      .footer-copy {
-        font-size: 1.6vmin;
       }
     }
